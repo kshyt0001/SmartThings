@@ -12,8 +12,8 @@
 <body>
 <p id="msg">인증 처리 중...</p>
 <script>
-var ST_CLIENT_ID     = 'b104ae2b-07eb-47af-88f1-70a3b7482e79';
-var ST_CLIENT_SECRET = '6e17abd5-d10e-4565-9bc9-f5e1bb4cbe0a';
+var ST_CLIENT_ID     = '576f3dd0-54e8-48ea-a199-fcd4791ba693';
+var ST_CLIENT_SECRET = 'f170ac571ec60a8269dfe891bf5766bca6583e489b104407bdacefea473dd537a013182ec24ca338f565e9464cfd23224cb405ca9d4027294b32c7983cfeab472bb10cf1ed7b1a84dedad348851b4bc7a5ec9a6d17f2158e21e32d550324e6c95b2991f915874ac2e8178285c36d5f8f8e4fa75af5758d31e04b6d841326560fb69e93424a05bd094ccdea96d1eea641f982c3b75747c25812678caf7c3ac3b9f65826faaf3619d5e80a82ed2e44f87d0bb5f51a4dc23954c2529f8c031554edf8969b8786177cc69bc8aa442fe2b68919c967656668c216a976ea3ce73183fc7e0376df965d8f378d09773539cecd08cdb7078b5f93ea43afa7e591a3e5cb43';
 var REDIRECT_URI     = location.origin + location.pathname;
 
 async function run() {
@@ -51,7 +51,7 @@ async function run() {
   if (!deviceId) { document.getElementById('msg').textContent = '인증 완료. 이 창을 닫아주세요.'; return; }
 
   // hub 페이지로 이동, 토큰을 hash로 전달 (iOS ITP 우회)
-  window.location.href = 'https://clipman.github.io/SmartThings/hub/?d=' +
+  window.location.href = 'https://kshyt0001.github.io/SmartThings/hub/?d=' +
     encodeURIComponent(deviceId) + '&auth=1' +
     '#sta=' + encodeURIComponent(data.access_token) +
     '&str=' + encodeURIComponent(data.refresh_token) +
