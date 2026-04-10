@@ -19,7 +19,7 @@ var REDIRECT_URI     = location.origin + location.pathname;
 async function run() {
   var p = new URLSearchParams(location.search);
   var code = p.get('code');
-  if (!code) { document.getElementById('msg').textContent = '인증 완료. 이 창을 닫아주세요.'; return; }
+  if (!code) { document.getElementById('msg').textContent = '인증 완료. 이 창을 닫아.'; return; }
 
   var deviceId = null;
   try { deviceId = atob(p.get('state') || ''); } catch(e) {}
