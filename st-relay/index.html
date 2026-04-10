@@ -48,7 +48,7 @@ async function run() {
   setCookie('st_refresh_token', data.refresh_token, 60);
   setCookie('st_token_expiry',  String(expiry),      1);
 
-  if (!deviceId) { document.getElementById('msg').textContent = '인증 완료. 이 창을 닫아주세요.'; return; }
+  if (!deviceId) { document.getElementById('msg').textContent = '인증 완료. 이 창을 닫아.'; return; }
 
   // hub 페이지로 이동, 토큰을 hash로 전달 (iOS ITP 우회)
   window.location.href = 'https://kshyt0001.github.io/SmartThings/hub/?d=' +
